@@ -3,13 +3,13 @@
 export const fetchRandom = (state) => (dispatch) => {
 
     dispatch({ type: "view-loading" });
-
+ 
     return fetch(`http://localhost:8080/r`, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({list: state}) // body data type must match "Content-Type" header
+     body: JSON.stringify({list: state}) 
     }).then(response => response.json())
       .then(json => {
           dispatch({ type: "random-result", data: json });
@@ -18,4 +18,4 @@ export const fetchRandom = (state) => (dispatch) => {
 }
 
 
-//TODO: agregar las demas acciones
+

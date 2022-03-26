@@ -24,11 +24,11 @@ import reactor.core.publisher.Mono;
 @RequestMapping(value = "/r")
 public class CincoNumerosController {
 
-    private CincoNumerosRepository dadoRepository;
+    private CincoNumerosRepository cincoNumerosRepository;
 
     @Autowired
-    public CincoNumerosController(CincoNumerosRepository dadoRepository) {
-        this.dadoRepository = dadoRepository;
+    public CincoNumerosController(CincoNumerosRepository cincoNumerosRepository) {
+        this.cincoNumerosRepository = cincoNumerosRepository;
     }
 
    @PostMapping("")
@@ -46,11 +46,11 @@ public class CincoNumerosController {
             var randomList = list.stream().collect(Collectors.joining(","));
             entity.setRandomList(randomList);
             return entity;
-        }).flatMap(dadoRepository::save);
+        }).flatMap(cincoNumerosRepository::save);
     }
 
     @GetMapping("")
     public Flux<CincoNumeros> get() {
-        return dadoRepository.findAll();
+        return cincoNumerosRepository.findAll();
     }
 }
