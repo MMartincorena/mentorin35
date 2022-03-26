@@ -1,6 +1,7 @@
-package co.com.sofka.mentoring35;
+package co.com.sofka.mentoring35.DTO;
 
-public class RequestDTO {
+
+public class CincoNumerosDTO {
     private String list;
 
     public String getList() {

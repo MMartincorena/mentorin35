@@ -1,4 +1,4 @@
-package co.com.sofka.mentoring35;
+package co.com.sofka.mentoring35.model;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class Random {
+public class CincoNumeros {
     private Date date;
     @Id
     private String id;
