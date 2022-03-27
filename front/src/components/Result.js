@@ -6,7 +6,7 @@ const Result = (props) => {
   
   console.log(props.result);
   return <div>
-     {props.result && 'Resultado: '+ props.result} 
+     {props.result && 'Lista: '+ props.result} 
   </div>
 }
 

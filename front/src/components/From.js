@@ -10,15 +10,13 @@ const From = (props) => {// component stateless
   };
   return <div>
     <form onSubmit={onSubmit}>
-      <label htmlFor="list">Ingrese una lista separada por comas:</label>
-      <br />
-      <textarea id="list"   
-        onChange={(e) => setState(e.target.value)}
-      ></textarea>
-      <br />
-      <button type="submit" disabled={props.loading}>
-        Enviar
+      <div>
+     
+      <button type="submit" disabled={props.loading} >
+        Generar lista de números
       </button>
+      </div>
+     <br/>
     </form>
   </div>
 }

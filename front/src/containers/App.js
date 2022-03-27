@@ -6,10 +6,10 @@ class App extends Component {// component stateful
   render() {
     return (
       <div>
-        <h3>Lista Random</h3>
-        <p>Sistema Ramdom - Demo</p>
+        <h3 >5 números random</h3>
         <From />
         <Result />
+
       </div>
     )
   }
